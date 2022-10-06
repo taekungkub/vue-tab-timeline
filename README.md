@@ -16,4 +16,4 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
 
 
-![plot](./public/Screen Shot 2565-10-06 at 12.50.22.png)
+![plot](./public/Screen%20Shot%202565-10-06%20at%2012.50.22.png)
