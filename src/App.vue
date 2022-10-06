@@ -43,9 +43,17 @@
       </TabsList>
     </div>
 
-    <button type="button" @click="openModal = true">Open modal</button>
+    <BaseModal v-model="openModal" title="Title" titleCenter="center"> </BaseModal>
 
-    <BaseModal v-model="openModal" title="Title" titleCenter="center"></BaseModal>
+    <div class="flex justify-end">
+      <BaseDropdown v-model="openDropdown" placement="left">
+        <BaseDropdownItem to="/asdadadsad">Profile</BaseDropdownItem>
+        <BaseDropdownItem>Settings</BaseDropdownItem>
+        <BaseDropdownItem>Help</BaseDropdownItem>
+        <BaseDropdownItem>Orders</BaseDropdownItem>
+        <BaseDropdownItem>Support</BaseDropdownItem>
+      </BaseDropdown>
+    </div>
   </div>
 </template>
 
@@ -55,6 +63,8 @@ import TabsItem from "./components/TabsItem.vue";
 import TabsList from "./components/TabsList.vue";
 import TimelineItemVertical from "./components/TimelineItemVertical.vue";
 import BaseModal from "./components/BaseModal.vue";
+import BaseDropdown from "./components/BaseDropdown.vue";
+import BaseDropdownItem from "./components/BaseDropdownItem.vue";
 
 const enumTabs = {
   one: 1,
@@ -68,6 +78,7 @@ const enumTabs = {
 const selectedTab = ref(1);
 
 const openModal = ref(false);
+const openDropdown = ref(false);
 </script>
 
 <style scoped lang="scss">
