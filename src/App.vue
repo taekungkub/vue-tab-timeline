@@ -42,6 +42,10 @@
         </TimelineItemVertical>
       </TabsList>
     </div>
+
+    <button type="button" @click="openModal = true">Open modal</button>
+
+    <BaseModal v-model="openModal" title="Title" titleCenter="center"></BaseModal>
   </div>
 </template>
 
@@ -50,6 +54,7 @@ import { ref } from "vue";
 import TabsItem from "./components/TabsItem.vue";
 import TabsList from "./components/TabsList.vue";
 import TimelineItemVertical from "./components/TimelineItemVertical.vue";
+import BaseModal from "./components/BaseModal.vue";
 
 const enumTabs = {
   one: 1,
@@ -61,6 +66,8 @@ const enumTabs = {
 };
 
 const selectedTab = ref(1);
+
+const openModal = ref(false);
 </script>
 
 <style scoped lang="scss">
